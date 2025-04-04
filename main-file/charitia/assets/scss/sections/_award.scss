@@ -1,0 +1,242 @@
+/* ==== 
+ --------- (5.11) award section styles start ---------
+ ==== */
+
+.award {
+  position: relative;
+  z-index: 1;
+
+  .award__single {
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      .content {
+        transform: translateY(0px);
+      }
+    }
+
+    .thumb {
+      a {
+        width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        min-height: 300px;
+        max-height: 300px;
+        transition: var(--transition);
+      }
+    }
+
+    .content {
+      padding: 40px 20px;
+      border-radius: 11px;
+      background: rgba(10, 32, 28, 0.51);
+      backdrop-filter: blur(10.5px);
+      position: absolute;
+      bottom: 30px;
+      margin-inline: 20px;
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: calc(100% - 40px);
+      max-width: 460px;
+      justify-content: space-between;
+      gap: 16px;
+      transform: translateY(150%);
+      transition: var(--transition);
+
+      h5 {
+        font-weight: 700;
+        color: var(--white);
+        &:hover {
+          color: var(--base-bg);
+        }
+      }
+
+      p {
+        color: var(--white);
+        font-size: 14px;
+      }
+
+      .award__thumb {
+        a {
+          @include box(50px);
+          background-color: var(--base-bg);
+          color: var(--black);
+          &:hover {
+            background-color: var(--white);
+            color: var(--black);
+          }
+          i {
+            font-size: 20px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+
+  .spade {
+    position: absolute;
+    bottom: 5%;
+    inset-inline-start: 20%;
+    z-index: -1;
+    img {
+      max-width: 20vw;
+      min-width: 60px;
+      animation: pulse 4s infinite ease-in-out;
+    }
+  }
+}
+
+.explore-area {
+  background-color: var(--white);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  .explore__single {
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 1;
+    overflow: hidden;
+    transform: scale(1);
+    transition: var(--transition);
+    border-radius: 10px;
+    &:nth-last-of-type(1) {
+      margin-bottom: 0px;
+    }
+    .thumb {
+      min-height: 240px;
+      height: 100%;
+      a {
+        width: 100%;
+        height: 100%;
+        transition: var(--transition);
+        img {
+          width: 100%;
+          height: 100%;
+          transition: var(--transition);
+          min-height: 270px;
+        }
+      }
+    }
+
+    .content {
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      z-index: 2;
+      padding: 20px 20px 40px 20px;
+
+      p {
+        color: var(--white);
+      }
+
+      h5 {
+        a {
+          font-weight: 600;
+          margin-top: 5px;
+          color: var(--base-bg);
+          &:hover {
+            color: var(--white);
+          }
+        }
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(#0000 0%, #000 100%);
+    }
+
+    .arr {
+      width: 50px;
+      height: 50px;
+      border-radius: 30px;
+      background: transparent;
+      backdrop-filter: blur(30px);
+      background-color: var(--base-bg);
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      z-index: 3;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: var(--black);
+      transform: rotate(45deg);
+      &:hover {
+        background-color: var(--white);
+      }
+    }
+
+    &:hover {
+      .thumb {
+        img {
+          transform: scale(1.2);
+        }
+      }
+
+      .content {
+        h5 {
+          a {
+            color: var(--white);
+          }
+        }
+      }
+
+      .arr {
+        background-color: var(--white);
+      }
+    }
+  }
+
+  .explore__wrapper {
+    margin-bottom: 40px;
+  }
+
+  .section__header--secondary {
+    h3 {
+      font-weight: 600;
+      color: var(--secondary-color);
+    }
+
+    p {
+      color: #555555;
+      margin-top: 10px;
+    }
+  }
+
+  .spade {
+    position: absolute;
+    bottom: 30%;
+    inset-inline-start: 18%;
+    z-index: -1;
+    img {
+      max-width: 20vw;
+      min-width: 60px;
+      animation: pulse 4s infinite ease-in-out;
+    }
+  }
+}
+
+.explore-alt {
+  margin-top: 140px;
+}
+
+/* ==== 
+ --------- (5.11) award section styles start ---------
+ ==== */

@@ -1,0 +1,122 @@
+/* ==== 
+ --------- (5.19) authentication section styles start ---------
+ ==== */
+
+.authentication {
+  background-color: var(--white);
+
+  .authentication__inner {
+    margin-top: -8px;
+  }
+
+  .input-single {
+    width: 100%;
+    margin-bottom: 24px;
+    &:nth-last-of-type(1) {
+      margin-bottom: 0px;
+    }
+    label {
+      display: block;
+      color: var(--template-color);
+      margin-bottom: 12px;
+      font-size: 17px;
+      font-weight: 600;
+    }
+    a {
+      display: block;
+      text-align: end;
+      margin-top: 12px;
+      font-size: 16px;
+      color: var(--template-color);
+      font-weight: 600;
+      direction: ltr;
+      &:hover {
+        color: var(--black);
+      }
+    }
+    input {
+      border-radius: 0px;
+      border: 1px solid #e7e7e7;
+      background: var(--white);
+      padding: 16px 16px;
+      width: 100%;
+      color: var(--template-color);
+      &:focus {
+        border-color: var(--black);
+      }
+      &::placeholder {
+        color: #a3a3a3;
+      }
+    }
+  }
+
+  .btn--secondary {
+    width: 100%;
+    justify-content: center;
+    border-radius: 0px;
+  }
+
+  .section__content-cta {
+    margin-top: 40px;
+  }
+
+  .divider {
+    margin: 30px 0px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: transparent;
+
+    p {
+      font-size: 16px;
+      text-transform: capitalize;
+      color: var(--template-color);
+      font-weight: 600;
+    }
+
+    span {
+      height: 1px;
+      flex-grow: 1;
+      background-color: #e9d7d7;
+    }
+  }
+
+  .auth-footer {
+    margin-top: 16px;
+    direction: ltr !important;
+    p {
+      color: var(--template-color);
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      a {
+        color: var(--template-color);
+        font-weight: 700;
+        &:hover {
+          color: var(--black);
+        }
+      }
+    }
+  }
+
+  .auth-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    direction: ltr !important;
+    button {
+      width: 60px;
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--black);
+      border-radius: 5px;
+    }
+  }
+}
+
+/* ==== 
+ --------- (5.19) authentication section styles end ---------
+ ==== */

@@ -1,0 +1,133 @@
+/* ==== 
+ --------- (5.14) faq section styles start ---------
+ ==== */
+.faq {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  .section__header {
+    max-width: 100%;
+  }
+
+  .accordion-item {
+    margin-bottom: 30px;
+    background-color: var(--white);
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4.4px 20px -1px rgba(19, 16, 34, 0.05);
+
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+
+    .accordion-button:not(.collapsed) {
+      color: var(--white);
+      background-color: var(--quaternary-color);
+      border-radius: 10px 10px 0px 0px;
+      box-shadow: none;
+
+      &::after {
+        color: var(--white);
+        transform: rotate(90deg);
+      }
+    }
+
+    .accordion-button {
+      border-radius: 0px;
+      color: var(--secondary-color);
+      position: relative;
+      background-color: transparent;
+      box-shadow: none;
+      border-radius: 10px;
+      padding: 20px;
+      font-weight: 700;
+      &::after {
+        content: "\f105";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        @include box(24px);
+        border-radius: 0px;
+        background-image: none;
+        font-size: 20px;
+        color: var(--secondary-color);
+      }
+    }
+  }
+
+  .accordion-item:first-of-type
+    > .accordion-header
+    .accordion-button.collapsed {
+    border-radius: 10px;
+  }
+
+  .accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
+    border-radius: 10px;
+  }
+
+  h6 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: 600;
+    color: var(--secondary-color);
+
+    button {
+      padding: 0px;
+      font-size: inherit;
+      line-height: inherit;
+      border: none;
+      outline: none;
+      box-shadow: 0px 0px 0px;
+      padding: 16px 0px;
+      border-radius: 10px;
+      color: var(--secondary-color);
+    }
+  }
+
+  .accordion-body {
+    padding: 24px 20px;
+    border: 0px;
+
+    p {
+      color: #747474;
+    }
+  }
+
+  .faq__thumb-inner {
+    min-width: 800px;
+    position: relative;
+    img {
+      width: unset;
+      border-radius: 10px;
+    }
+
+    .thumb-sm {
+      position: absolute;
+      top: 80px;
+      inset-inline-start: 40%;
+      border: 10px solid #ebe5e5;
+      border-radius: 20px;
+    }
+
+    .thumb-lg {
+      position: relative;
+      display: inline-block;
+      border: 10px solid #ebe5e5;
+      border-radius: 20px;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        inset-inline-end: -40px;
+        width: 20px;
+        height: 400px;
+        background-color: var(--base-bg);
+        border-radius: 20px;
+      }
+    }
+  }
+}
+/* ==== 
+ --------- (5.14) faq section styles start ---------
+ ==== */
