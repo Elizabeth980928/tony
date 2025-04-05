@@ -1284,7 +1284,7 @@ div {
 .parallax-image-inner {
   border-radius: inherit;
 }
-
+/* 
 .title-animation {
   text-transform: lowercase !important;
 }
@@ -1293,7 +1293,7 @@ div {
 }
 .title-animation > span > div > div:nth-child(1) {
   text-transform: uppercase;
-}
+} */
 
 .breadcrumb {
   margin-bottom: 0px;
@@ -2563,7 +2563,7 @@ div {
 
 .logo-subtitle {
   font-family: 'Times New Roman', serif;
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 2px;
   color: #e8c17d;
   display: block; /* Ensures it's on its own line */
@@ -2577,6 +2577,8 @@ div {
           flex-grow: 1;
   -webkit-margin-start: -15px;
           margin-inline-start: -15px;
+
+       
 }
 .header .navbar__list {
   display: -webkit-box;
@@ -7347,6 +7349,10 @@ div {
   font-weight: 800;
   color: var(--secondary-color);
 }
+
+
+
+
 .cause .content h6:hover {
   color: var(--hover-color);
 }
