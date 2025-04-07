@@ -2072,8 +2072,8 @@ div {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 5px;
-  background: -webkit-gradient(linear, left top, right top, from(#ffcc00), color-stop(#00ccff), color-stop(#ff6600), to(#ffcc00));
-  background: linear-gradient(90deg, #ffcc00, #00ccff, #ff6600, #ffcc00);
+  background: -webkit-gradient(linear, left top, right top, from(#836600), color-stop(#00715d), color-stop(#00715d), to(#836600));
+  background: linear-gradient(90deg, #836600, #00715d, #00715d, #836600);
   background-size: 300%;
   background-clip: text;
   -webkit-background-clip: text;
