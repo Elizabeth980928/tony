@@ -2023,6 +2023,13 @@ div {
 /* ==== 
  --------- (3.03) preloader styles start ---------
  ==== */
+
+ .logo-preloader
+ {
+   height: 100px;
+   width:100px
+ }
+
 .preloader {
   background-color: var(--black);
   position: fixed;
