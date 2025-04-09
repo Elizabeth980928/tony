@@ -4537,6 +4537,16 @@ div {
   position: relative;
   z-index: 1;
 }
+
+.footer-title
+{
+  color:#e8c17d;
+  font-family: 'Times New Roman', serif;
+  font-size: 50px;
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
 .footer .footer__thumb-left {
   position: absolute;
   bottom: 0px;
