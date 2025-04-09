@@ -86,7 +86,7 @@
   --quinary-color: #061408;
   --septenary-color: #0c141f;
   --senary-color: #d9d9d9;
-  --hover-color: linear-gradient(to right, #b88936, #e8c17d);
+  --hover-color: #836600;
   --transition: all 0.5s ease;
   --shadow: 0px 10px 25px 0px rgba(37, 42, 52, 0.08);
   --shadow-secondary: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
@@ -5656,14 +5656,21 @@ div {
 }
 .about-area .about__thumb {
   position: relative;
-  max-width: 600px;
+  margin-top: -50px !important;
+  
+
 }
 .about-area .about__thumb img {
   border-radius: 20px;
+  
+  
 }
 .about-area .about__thumb-big {
   position: relative;
+ 
 }
+
+
 .about-area .about__thumb-big::before {
   content: "";
   position: absolute;
@@ -5678,7 +5685,7 @@ div {
   z-index: -1;
 }
 .about-area .about__thumb-big img {
-  min-height: 600px;
+  min-height: 300px;
 }
 .about-area .about__thumb-big .video-btn-wrapper {
   top: 40px;
@@ -5746,7 +5753,7 @@ div {
           justify-content: space-between;
   gap: 12px;
 }
-.about-area .about__thumb-sm__content-counter h2 {
+.about-area .about__thumb-sm__content-counter h4 {
   font-weight: 700;
   color: var(--primary-color);
   display: -webkit-box;
@@ -7693,6 +7700,30 @@ div {
 /* ==== 
  --------- (5.07) contact section styles start ---------
  ==== */
+
+/* Success Message */
+.contact__form .success-message {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Error Message */
+.contact__form .error-message {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+
+
 .contact-mc {
   position: relative;
   z-index: 1;
