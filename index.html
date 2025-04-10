@@ -1212,31 +1212,37 @@
                            <span class="sub-title">Contact Us</span>
                            <h2 class="title-animation">Get In Touch</h2>
                         </div>
-                        <div class="contact__form" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                           <form id="contactForm" action="/your-backend-endpoint" method="POST">
-                              <div class="input-group">
-                                 <div class="input-single">
-                                    <input type="email" name="contact-email" id="contactEmail" required placeholder="your email...">
-                                    <i class="fa-solid fa-paper-plane"></i>
-                                 </div>
-                                 <div class="input-single">
-                                    <input type="text" name="contact-number" id="contactNumber" required placeholder="your phone...">
-                                    <i class="fa-solid fa-phone"></i>
-                                 </div>
-                              </div>
-                              <div class="input-single">
-                                 <input type="text" name="contact-address" id="contactAddress" placeholder="your address...">
-                                 <i class="fa-solid fa-location-dot"></i>
-                              </div>
-                              <div class="input-single alter-input">
-                                 <textarea name="contact-message" id="contactMessage" placeholder="your message..."></textarea>
-                                 <i class="fa-solid fa-envelope"></i>
-                              </div>
-                              <div class="form-cta">
-                                 <button type="submit" class="btn--secondary"><span>Get A Quote</span></button>
-                              </div>
-                           </form>
+                        <div class="contact__form volunteer__form checkout__form" data-aos="fade-up"
+                        data-aos-duration="1000" data-aos-delay="100">
+                        <div class="volunteer__form-content">
+                           <h4 class="title-animation">Fill Up The Form</h4>
+                           <p>Your email address will not be published. Required fields are marked *</p>
                         </div>
+                        <form action="#" method="post" class="mt-60">
+                           <div class="input-single">
+                              <input type="text" name="full-name" id="fullName" placeholder="Enter Name" required>
+                              <i class="fa-solid fa-user"></i>
+                           </div>
+                           <div class="input-single">
+                              <input type="email" name="c-email" id="cEmail" placeholder="Enter Email" required>
+                              <i class="fa-solid fa-envelope"></i>
+                           </div>
+                           <div class="input-single">
+                              <input type="text" name="phone-number" id="phoneNumber" placeholder="Phone Number"
+                                 required>
+                              <i class="fa-solid fa-phone"></i>
+                           </div>
+                           <div class="input-single alter-input">
+                              <textarea name="contact-message" id="contactMessage"
+                                 placeholder="Your Message..."></textarea>
+                              <i class="fa-solid fa-comments"></i>
+                           </div>
+                           <div class="form-cta">
+                              <button type="submit" aria-label="submit message" title="submit message"
+                                 class="btn--secondary" data-text="Get A Quote"><span>Get A Quote</span></button>
+                           </div>
+                        </form>
+                     </div>
                      </div>
                   </div>
                </div>
