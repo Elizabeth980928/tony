@@ -26,6 +26,53 @@
       <link rel="stylesheet" href="assets/css/main.css">
       <!-- responsive css -->
       <link rel="stylesheet" href="assets/css/responsive.css">
+      <script src="js/server.js"></script> <!-- Load your script after emailjs is ready -->
+
+
+       <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+
+
+   
+
+
+  <script>
+  (function(){
+    emailjs.init("k1G4iW18ANWqqDszs"); // Your actual PUBLIC KEY here
+  })();
+
+  function sendMail(event) {
+    event.preventDefault(); // Stop form from refreshing
+
+    var params = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      phoneNumber: document.getElementById("phoneNumber").value,
+      message: document.getElementById("message").value
+    };
+
+    const serviceID = "service_oia60jq";
+    const templateID = "template_uvrfaj6";
+
+    emailjs.send(serviceID, templateID, params)
+      .then(res => {
+        alert("Your message was sent successfully!");
+        document.getElementById("contact-form").reset(); // Clear the form
+      })
+      .catch(err => console.error("Failed to send message:", err));
+  }
+
+  // Attach form submit listener
+  window.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById("contact-form");
+    if (form) {
+      form.addEventListener("submit", sendMail);
+    }
+  });
+</script>
+
+
 
    </head>
    <body>
@@ -1216,30 +1263,26 @@
                            <h4 class="title-animation">Fill Up The Form</h4>
                            <p>Your email address will not be published. Required fields are marked *</p>
                         </div>
-                        <form action="#" method="post" class="mt-60">
+                        <form class="mt-60" onsubmit="sendMail(event)">
                            <div class="input-single">
-                              <input type="text" name="full-name" id="fullName" placeholder="Enter Name" required>
-                              <i class="fa-solid fa-user"></i>
+                             <input type="text" name="name" id="name" placeholder="Enter Name" required autocomplete="name">
                            </div>
                            <div class="input-single">
-                              <input type="email" name="c-email" id="cEmail" placeholder="Enter Email" required>
-                              <i class="fa-solid fa-envelope"></i>
+                             <input type="email" name="email" id="email" placeholder="Enter Email" required autocomplete="email">
                            </div>
                            <div class="input-single">
-                              <input type="text" name="phone-number" id="phoneNumber" placeholder="Phone Number"
-                                 required>
-                              <i class="fa-solid fa-phone"></i>
+                             <input type="text" name="phone-number" id="phoneNumber" placeholder="Phone Number" required autocomplete="tel">
                            </div>
                            <div class="input-single alter-input">
-                              <textarea name="contact-message" id="contactMessage"
-                                 placeholder="Your Message..."></textarea>
-                              <i class="fa-solid fa-comments"></i>
+                             <textarea name="message" id="message" placeholder="Your Message..." autocomplete="off"></textarea>
                            </div>
                            <div class="form-cta">
-                              <button type="submit" aria-label="submit message" title="submit message"
-                                 class="btn--secondary" data-text="Get A Quote"><span>Get A Quote</span></button>
+                             <button type="submit" class="btn--secondary" data-text="Get A Quote">
+                               <span>Get A Quote</span>
+                             </button>
                            </div>
-                        </form>
+                         </form>
+                         
                      </div>
                      </div>
                   </div>
@@ -1284,152 +1327,56 @@
          <div class="gallery" >
             <div class="gallery__inner">
                <div class="gallery__slider">
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img1..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img1..jpg">
-                     <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img2..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img2..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img3..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img1..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img4..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img4..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img5..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img5..jpgl">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img7..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img7..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img8..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img8..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img9..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img9..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img10..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img10..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img11..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img11..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img12..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img12..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img13..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img13..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img14..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img14..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img15.jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img15.jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img16..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img16..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img20..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img7..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img21..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img21..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img22..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img22..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img23..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img23..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img24..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img24..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img25..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img25..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img26..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img26..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img27..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img27..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
 
-                  <div class="gallery__single">
-                     <img src="assets/images/gallery/gallery1/img28..jpg" alt="Image">
-                     <a href="assets/images/gallery/gallery1/img28..jpg">
-                        <i class="fa-brands bi-image"></i>
-                     </a>
-                  </div>
-           
+                       <!-- Original set of images -->
+                       <div class="gallery__single"><img src="assets/images/gallery/gallery1/img1..jpg" alt=""></div>
+                       <div class="gallery__single"><img src="assets/images/gallery/gallery1/img2..jpg" alt=""></div>
+                       <div class="gallery__single"><img src="assets/images/gallery/gallery1/img3..jpg" alt=""></div>
+                       <div class="gallery__single"><img src="assets/images/gallery/gallery1/img4..jpg" alt=""></div>
+                       <!-- Duplicate set of images -->
+                       <div class="gallery__single"><img src="assets/images/gallery/gallery1/img5..jpg" alt=""></div>
+                       <div class="gallery__single"><img src="assets/images/gallery/gallery1/img7..jpg" alt=""></div>
+                       <div class="gallery__single"><img src="assets/images/gallery/gallery1/img8..jpg" alt=""></div>
+              
+                          <!-- Duplicate set of images -->
+                          <div class="gallery__single"><img src="assets/images/gallery/gallery1/img9..jpg" alt=""></div>
+                          <div class="gallery__single"><img src="assets/images/gallery/gallery1/img10..jpg" alt=""></div>
+                          <div class="gallery__single"><img src="assets/images/gallery/gallery1/img11..jpg" alt=""></div>     
+                            <!-- Duplicate set of images -->
+                          <div class="gallery__single"><img src="assets/images/gallery/gallery1/img12..jpg" alt=""></div>
+                          <div class="gallery__single"><img src="assets/images/gallery/gallery1/img13..jpg" alt=""></div>
+                          <div class="gallery__single"><img src="assets/images/gallery/gallery1/img14..jpg" alt=""></div>
+                                 <!-- Duplicate set of images -->
+                       <div class="gallery__single"><img src="assets/images/gallery/gallery1/img16..jpg" alt=""></div>
+                       <div class="gallery__single"><img src="assets/images/gallery/gallery1/img17..jpg" alt=""></div>
+                       <div class="gallery__single"><img src="assets/images/gallery/gallery1/img24..jpg" alt=""></div>
+                       
+               <!-- Duplicate set of images -->
+               <div class="gallery__single"><img src="assets/images/gallery/gallery1/img18..jpg" alt=""></div>
+               <div class="gallery__single"><img src="assets/images/gallery/gallery1/img19..jpg" alt=""></div>
+               <div class="gallery__single"><img src="assets/images/gallery/gallery1/img20..jpg" alt=""></div>
+                              <!-- Duplicate set of images -->
+                              <div class="gallery__single"><img src="assets/images/gallery/gallery1/img21..jpg" alt=""></div>
+                              <div class="gallery__single"><img src="assets/images/gallery/gallery1/img22..jpg" alt=""></div>
+                              <div class="gallery__single"><img src="assets/images/gallery/gallery1/img23..jpg" alt=""></div>
+                                   <!-- Duplicate set of images -->
+                                   <div class="gallery__single"><img src="assets/images/gallery/gallery1/img24..jpg" alt=""></div>
+                                   <div class="gallery__single"><img src="assets/images/gallery/gallery1/img25..jpg" alt=""></div>
+                                   <div class="gallery__single"><img src="assets/images/gallery/gallery1/img26..jpg" alt=""></div>
+                                        <!-- Duplicate set of images -->
+                              <div class="gallery__single"><img src="assets/images/gallery/gallery1/img27..jpg" alt=""></div>
+                              <div class="gallery__single"><img src="assets/images/gallery/gallery1/img28..jpg" alt=""></div>
+                              <div class="gallery__single"><img src="assets/images/gallery/gallery1/img23..jpg" alt=""></div>
+                              
+                                   
+
+
+
+
+
+
+
+
 
                </div>
             </div>
@@ -1638,6 +1585,8 @@
       </div>
       <!-- ==== js dependencies start ==== -->
       <!-- jquery -->
+
+
       <script src="assets/js/jquery-3.7.1.min.js"></script>
       <!-- bootstrap five js -->
       <script src="assets/js/bootstrap.bundle.min.js"></script>

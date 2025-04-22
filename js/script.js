@@ -114,3 +114,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
       showPage(currentPage);
    });
 
+
+   // gallery
+   const slider = document.querySelector('.gallery__slider');
+   slider.innerHTML += slider.innerHTML; // Duplicate all child elements
+   
