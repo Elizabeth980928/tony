@@ -7899,6 +7899,105 @@ div {
   color: var(--hover-color);
 }
 
+
+
+input[type="submit"] {
+  display: block;
+  padding: 6px 30px;
+  font-size: 14px;
+  background-color: #4460AA;
+  color: #fff;
+  border: none
+}
+
+
+/* new */
+/* Container padding for smaller screens */
+@media (max-width: 768px) {
+  .contact__content {
+    padding: 20px;
+  }
+}
+
+/* Form field styles */
+.field {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.field label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #ccc;
+  font-weight: 500;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  transition: 0.3s;
+  resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #aaa;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #2a2a2a;
+}
+
+/* Button style */
+#button {
+  background: linear-gradient(to right, #b88936, #e8c17d);
+  color: rgb(0, 2, 9);
+  font-weight: bold;
+  padding: 14px 25px;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+#button:hover {
+  background-color: #046a58;
+}
+
+/* Success/Error message box styles */
+.success-message,
+.error-message {
+  display: none;
+  margin-top: 20px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.success-message {
+  background-color: #28a745;
+  color: white;
+}
+
+.error-message {
+  background-color: #dc3545;
+  color: white;
+}
+
+
 /* ==== 
  --------- (5.07) contact section styles end ---------
  ==== */

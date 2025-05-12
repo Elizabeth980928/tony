@@ -1,31 +1,22 @@
+  document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('button');
 
+    document.getElementById('form')
+      .addEventListener('submit', function(event) {
+        event.preventDefault();
+        btn.value = 'Sending...';
 
+        const serviceID = 'service_cxh29ca';
+        const templateID = 'template_ha9c9cc';
+        const publicKey = 'Uf0so-hutVvGrIDxC'; 
 
-function sendMail(event) {
-  event.preventDefault(); // Stop form from refreshing
-
-  var params = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    phoneNumber: document.getElementById("phoneNumber").value,
-    message: document.getElementById("message").value
-  };
-
-  const serviceID = "service_oia60jq";
-  const templateID = "template_07s7hab";
-
-  emailjs.send(serviceID, templateID, params)
-    .then(res => {
-      alert("Your message was sent successfully!");
-      document.getElementById("contact-form").reset(); // Clear the form
-    })
-    .catch(err => console.error("Failed to send message:", err));
-}
-
-// Attach form submit listener
-window.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById("contact-form");
-  if (form) {
-    form.addEventListener("submit", sendMail);
-  }
-});
+        emailjs.sendForm(serviceID, templateID, this, publicKey)
+          .then(() => {
+            btn.value = 'Send Email';
+            alert('Sent!');
+          }, (err) => {
+            btn.value = 'Send Email';
+            alert(JSON.stringify(err));
+          });
+      });
+  });
