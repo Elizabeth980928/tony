@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', function () {
       event.preventDefault();
       btn.value = 'Sending...';
 
-      const serviceID = 'service_48gfgtc';
-      const templateID = 'template_ha9c9cc';
-      const publicKey = 'Uf0so-hutVvGrIDxC'; 
+      const serviceID = 'service_0w9fujj';
+      const templateID = 'template_9u2gg5o';
+      const publicKey = 'i9IgEiicy2n0VxDSY'; 
 
       emailjs.sendForm(serviceID, templateID, this, publicKey)
         .then(() => {
